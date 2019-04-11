@@ -75,7 +75,7 @@ public class Cat {
         if (!isHungry())
             throw new IllegalStateException("Can't stuff a cat...");
 
-        currentState = currentState.successor(this);
+        currentState = ((HungryState)currentState).feed(this);
         timeDigesting = 0;
     }
 

@@ -17,10 +17,6 @@ public abstract class State {
     public abstract State successor(Cat cat);
 
     public State tick(Cat cat) {
-        if(duration < 0)
-            return this;
-
-        // time goes by...
         time = time + 1;
 
         if(time < duration) {
